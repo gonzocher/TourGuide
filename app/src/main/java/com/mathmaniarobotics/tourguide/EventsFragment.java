@@ -31,7 +31,7 @@ public class EventsFragment extends Fragment {
         CustomEventAdapter customAdapter = new CustomEventAdapter(getContext(), eventsList, images);
         simpleList.setAdapter(customAdapter);
 
-
+/*
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -40,7 +40,10 @@ public class EventsFragment extends Fragment {
                 eventDetails.setVisibility(View.VISIBLE);
             }
         });
+
+    */
     }
+
 }
 
 
