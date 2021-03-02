@@ -28,20 +28,20 @@ public class EventsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         simpleList = view.findViewById(R.id.eventListView);
+        eventDetails = (TextView) view.findViewById(R.id.event_view);
         CustomEventAdapter customAdapter = new CustomEventAdapter(getContext(), eventsList, images);
         simpleList.setAdapter(customAdapter);
 
-/*
+
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Place your code here
-                TextView eventDetails = (TextView) findViewById(R.id.event_view);
                 eventDetails.setVisibility(View.VISIBLE);
             }
         });
 
-    */
+
     }
 
 }
