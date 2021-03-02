@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 public class EventsFragment extends Fragment {
     ListView simpleList;
+    TextView eventDetails;
     String eventsList[] = {"Service Project", "Spikeball", "Robotics Challenge", "Meet Your Teacher"};
     int images[] = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground};
 
@@ -27,8 +30,17 @@ public class EventsFragment extends Fragment {
         simpleList = view.findViewById(R.id.eventListView);
         CustomEventAdapter customAdapter = new CustomEventAdapter(getContext(), eventsList, images);
         simpleList.setAdapter(customAdapter);
-    }
 
+
+        simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Place your code here
+                TextView eventDetails = (TextView) findViewById(R.id.event_view);
+                eventDetails.setVisibility(View.VISIBLE);
+            }
+        });
+    }
 }
 
 

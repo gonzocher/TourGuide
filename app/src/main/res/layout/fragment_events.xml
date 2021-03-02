@@ -16,4 +16,11 @@
         android:divider="@color/material_blue_grey_800"
         android:dividerHeight="1dp"
         android:footerDividersEnabled="false" />
+    <TextView
+        android:id="@+id/event_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is it before"
+        android:visibility="invisible"
+        />
 </RelativeLayout>
