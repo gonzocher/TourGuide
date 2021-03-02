@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,8 +39,11 @@ public class EventsFragment extends Fragment {
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Place your code here
+                TextView v = (TextView) view.findViewById(R.id.service_project_details);
+                //Toast.makeText(getApplication(), eventsList[position], Toast.LENGTH_LONG).show();
+
                 serviceProjectDetails.setVisibility(View.VISIBLE);
+                //serviceProjectDetails.setText(v.getText());
                 eventListView.setVisibility(View.INVISIBLE);
 
             }
