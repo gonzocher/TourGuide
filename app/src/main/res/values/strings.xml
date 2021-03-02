@@ -3,4 +3,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="google_api_key">AIzaSyBRHhJ-gzgvOvV5O1HJmEXNl5838FFh-8g</string>
+    <string name="service_project_details">The service project will be held in October this year.</string>
+    <string name="spikeball_details">Spikeball will be in the gym</string>
+    <string name="robotics_competition_details">Join us in the robotics lab for this year\'s robotics competition</string>
+    <string name="meet_your_teacher_details">Meet your teacher and pick up your books in Sillers Hall.</string>
 </resources>

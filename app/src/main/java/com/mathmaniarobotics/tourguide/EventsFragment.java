@@ -14,7 +14,8 @@ import androidx.fragment.app.Fragment;
 
 public class EventsFragment extends Fragment {
     ListView simpleList;
-    TextView eventDetails;
+    TextView serviceProjectDetails;
+    ListView eventListView;
     String eventsList[] = {"Service Project", "Spikeball", "Robotics Challenge", "Meet Your Teacher"};
     int images[] = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground, R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground};
 
@@ -28,7 +29,8 @@ public class EventsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         simpleList = view.findViewById(R.id.eventListView);
-        eventDetails = (TextView) view.findViewById(R.id.event_view);
+        serviceProjectDetails = (TextView) view.findViewById(R.id.service_project_details);
+        eventListView = (ListView) view.findViewById(R.id.eventListView);
         CustomEventAdapter customAdapter = new CustomEventAdapter(getContext(), eventsList, images);
         simpleList.setAdapter(customAdapter);
 
@@ -37,7 +39,9 @@ public class EventsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Place your code here
-                eventDetails.setVisibility(View.VISIBLE);
+                serviceProjectDetails.setVisibility(View.VISIBLE);
+                eventListView.setVisibility(View.INVISIBLE);
+
             }
         });
 
