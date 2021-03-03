@@ -40,7 +40,7 @@ public class EventsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView v = (TextView) view.findViewById(R.id.service_project_details);
-                //Toast.makeText(getApplication(), eventsList[position], Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(), eventsList[position], Toast.LENGTH_LONG).show();
 
                 serviceProjectDetails.setVisibility(View.VISIBLE);
                 //serviceProjectDetails.setText(v.getText());
